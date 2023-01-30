@@ -10,7 +10,7 @@ const INSTRUMENTS = {
 };
 
 const instrument = process.argv[2];
-if(!INSTRUMENTS.includes(instrument)){
+if(!(instrument in INSTRUMENTS)){
     console.log('This instrument (${instrument}) is not correct.');
     return;
 }
@@ -28,9 +28,11 @@ var payload = JSON.stringify({
     sound: INSTRUMENTS[instrument]
 })
 
+var payloadString = JSON.stringify(payload) 
+
 function instrumentsSend() {
-    client.send(message, 0, message.length, PORT, HOST, () => {
-      console.log('payload ' + payload + 'on port ' + client.address().port);
+    client.send(payloadString, 0, payloadString.length, PORT, HOST, () => {
+      console.log('payload ' + payload + ' on port ' + client.address().port);
     });
   }
   
