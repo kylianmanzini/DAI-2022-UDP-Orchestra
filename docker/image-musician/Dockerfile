@@ -6,4 +6,4 @@ COPY src/ /usr/src/app/
 
 RUN npm install
 
-ENTRYPOINT [ "node", "index.js" ]
+ENTRYPOINT [ "node", "app.js" ]

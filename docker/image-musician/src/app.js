@@ -16,24 +16,21 @@ if(!(instrument in INSTRUMENTS)){
 }
 
 var udp = require('dgram');
-
 var client = udp.createSocket('udp4');
-
 var crypto = require('crypto');
-
 var uuid = crypto.randomUUID();
 
-var payload = JSON.stringify({
+var payload =  JSON.stringify({
     uuid,
     sound: INSTRUMENTS[instrument]
 })
 
-var payloadString = JSON.stringify(payload) 
+var msg = Buffer.from(payload);
 
 function instrumentsSend() {
-    client.send(payloadString, 0, payloadString.length, PORT, HOST, () => {
+    client.send(msg, PORT, HOST, () => {
       console.log('payload ' + payload + ' on port ' + client.address().port);
     });
   }
   
-  setInterval(instrumentsSend, 1000);
+setInterval(instrumentsSend, 1000);

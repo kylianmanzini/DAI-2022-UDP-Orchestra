@@ -23,24 +23,25 @@ socket.bind(PORT, () => {
   socket.addMembership(HOST);
 });
 
+function getKeyByValue(object, value) {
+  return Object.keys(object).find(key => object[key] === value);
+}
 
 socket.on('message', (msg, src) => {
-
+    var received = JSON.parse(msg);
     var payload = {
-      ...JSON.parse(msg),
+      uuid: received.uuid,
       lastActive: Date.now(),
     };
 
-    payload.instrument = 
-            Object.keys(INSTRUMENTS).find((instrument) => payload.sound === INSTRUMENTS[instrument]);
-    payload.activeSince = musicians.has(payload.uuid) 
-            ? musicians.get(payload.uuid).activeSince 
-            : payload.lastActive;
+    payload.instrument = getKeyByValue(INSTRUMENTS,received.sound);
+    payload.activeSince = musicians.has(payload.uuid) ? musicians.get(payload.uuid).activeSince : payload.lastActive;
     delete payload.sound;
   
     musicians.set(payload.uuid, payload);
   
     console.log('Data: ' + msg + '. Source: ' + src.address + ":" + src.port);
+    console.log('Payload: ' + payload.uuid + " " + payload.instrument);
   });
 
 server.listen(tcpPort);
