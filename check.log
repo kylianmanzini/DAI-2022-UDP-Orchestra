@@ -1,0 +1,27 @@
+origin	https://github.com/kylianmanzini/DAI-2022-UDP-Orchestra.git (fetch)
+origin	https://github.com/kylianmanzini/DAI-2022-UDP-Orchestra.git (push)
+upstream	https://github.com/HEIGVD-Course-DAI/DAI-2022-UDP-Orchestra.git (fetch)
+upstream	https://github.com/HEIGVD-Course-DAI/DAI-2022-UDP-Orchestra.git (push)
+Starting auditor container "475933270d4f286b49124bf9ca8fce5057ebd5e16d30bdb8ee5ec0b1ffd19b8c"
+Starting auditor container "9a7f7631a17252f0fe4f0c650a962258f335a96187a432ff259a1f86f9706d05"
+Starting auditor container "40be0fabdc83b07cfa5ee0f5015aaa221fa0d658b82a877ad69e2e78762594e4"
+Starting auditor container "ba422fc13c7eb9bca83b11d0e1724aa3d3380ede58c474c5748aa8521c344062"
+Starting auditor container "b477b011eb8899d6787bd0c914b733bf80225f7e79b48102a708ab3d71b6085a"
+Starting auditor container "2d7aef4c72a1c90060a9cf6af4131a1d3fbb406a0f8c4dddf184e5e3ba7b277d"
+Starting auditor container "2b98c9dbbf55450edc6a1704fb5ea0dce0dc22866a702bd8d9d6118b78f18226"
+Starting auditor container "c1eb15f4acc9874b2384051691ad9f2f7505d7c1ac7abd49b12acbd51827f57c"
+Starting auditor container "a02c08717e8e2cad7d32f546cd289df489116f80a19666094c46ecce5a4de72f"
+Starting auditor container "ac82849df2e29422bef7412df697c8d47fa4d3f5b9fa38a4b601711b843e1e27"
+Starting auditor container "aaca7548a79d2b50599c197b96f7af348cb990c3984f43fb2caa7806c4a36cae"
+11 containers have been started.
+40be0fabdc83b07cfa5ee0f5015aaa221fa0d658b82a877ad69e2e78762594e4 : index.js,drum
+a02c08717e8e2cad7d32f546cd289df489116f80a19666094c46ecce5a4de72f : index.js,violin
+2b98c9dbbf55450edc6a1704fb5ea0dce0dc22866a702bd8d9d6118b78f18226 : index.js,piano
+c1eb15f4acc9874b2384051691ad9f2f7505d7c1ac7abd49b12acbd51827f57c : index.js,drum
+475933270d4f286b49124bf9ca8fce5057ebd5e16d30bdb8ee5ec0b1ffd19b8c : index.js,drum
+aaca7548a79d2b50599c197b96f7af348cb990c3984f43fb2caa7806c4a36cae : index.js,flute
+9a7f7631a17252f0fe4f0c650a962258f335a96187a432ff259a1f86f9706d05 : index.js,violin
+ac82849df2e29422bef7412df697c8d47fa4d3f5b9fa38a4b601711b843e1e27 : index.js,trumpet
+2d7aef4c72a1c90060a9cf6af4131a1d3fbb406a0f8c4dddf184e5e3ba7b277d : index.js,flute
+b477b011eb8899d6787bd0c914b733bf80225f7e79b48102a708ab3d71b6085a : index.js,violin
+ba422fc13c7eb9bca83b11d0e1724aa3d3380ede58c474c5748aa8521c344062 : index.js

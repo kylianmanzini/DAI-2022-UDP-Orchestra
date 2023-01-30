@@ -18,15 +18,14 @@ const server = net.createServer();
 
 var musicians = new Map();
 
-
 socket.bind(PORT, () => {
   console.log('Joining multicast group : ' + HOST + ":" + PORT);
   socket.addMembership(HOST);
 });
 
 
-
 socket.on('message', (msg, src) => {
+
     var payload = {
       ...JSON.parse(msg),
       lastActive: Date.now(),
@@ -44,7 +43,6 @@ socket.on('message', (msg, src) => {
     console.log('Data: ' + msg + '. Source: ' + src.address + ":" + src.port);
   });
 
-  
 server.listen(tcpPort);
 
 server.on('connection', (socket) => {
