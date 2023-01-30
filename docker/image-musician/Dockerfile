@@ -1,8 +1,9 @@
-FROM node:4.3.1
+FROM node:16-alpine
 
-COPY src /opt/app/
+WORKDIR /usr/src/app
 
-WORKDIR /opt/app/
+COPY src/ /usr/src/app/
+
 RUN npm install
 
-ENTRYPOINT ["node", "/opt/app/app.js"]
+ENTRYPOINT [ "node", "index.js" ]
