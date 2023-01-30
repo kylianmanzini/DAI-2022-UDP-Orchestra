@@ -1,5 +1,5 @@
-const HOST = 'localhost';
-const PORT = 2205;
+const HOST = '239.1.1.1';
+const PORT = 5555;
 
 const INSTRUMENTS = {
   piano: 'ti-ta-ti',
